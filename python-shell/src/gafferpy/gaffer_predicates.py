@@ -18,6 +18,7 @@
 This module contains Python copies of Gaffer predicate java classes
 """
 
+from gafferpy.generated_api.predicates import *
 from gafferpy.gaffer_core import *
 
 
@@ -82,13 +83,15 @@ class TimeUnit:
     MILLISECOND = 'MILLISECOND'
     MICROSECOND = 'MICROSECOND'
 
+
 # Import generated predicate implementations from fishbowl
-from gafferpy.generated_api.predicates import *
 
 # Add an alternative name for IntegerTupleAdaptedPredicate
+
 class NestedPredicate(IntegerTupleAdaptedPredicate):
     pass
-        
+
+
 def predicate_context_converter(obj):
     if obj is None:
         return None

@@ -19,6 +19,7 @@
 This module contains Python copies of Gaffer function java classes
 """
 
+from gafferpy.generated_api.functions import *
 from gafferpy.gaffer_core import *
 import gafferpy.gaffer_predicates as pred
 import gafferpy.gaffer_binaryoperators as bop
@@ -57,6 +58,7 @@ class AbstractFunction(Function):
 
         return function_json
 
+
 class ElementGenerator(Function):
     CLASS = 'uk.gov.gchq.gaffer.data.generator.ElementGenerator'
 
@@ -65,8 +67,9 @@ class ElementGenerator(Function):
                  fields=None):
         super().__init__(class_name=class_name, fields=fields)
 
+
 # Import generated function implementations from fishbowl
-from gafferpy.generated_api.functions import *
+
 
 class FunctionContext(TupleAdaptedFunction):
     CLASS = "gaffer.FunctionContext"
@@ -79,6 +82,7 @@ class FunctionContext(TupleAdaptedFunction):
         del function_json["class"]
 
         return function_json
+
 
 def function_context_converter(obj):
     if 'class' in obj:
@@ -103,7 +107,7 @@ def function_context_converter(obj):
         function=function,
         projection=obj.get('projection')
     )
-        
+
 
 def function_converter(obj):
     if isinstance(obj, dict):
