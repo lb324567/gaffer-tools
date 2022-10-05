@@ -36,6 +36,7 @@ class GetGraph:
 from gafferpy.generated_api.config import *
 # Add an alternative name for GetFilterFunctions
 
+
 class GetClassFilterFunctions(GetFilterFunctions):
     def __init__(self, class_name=''):
         super().__init__(class_name)

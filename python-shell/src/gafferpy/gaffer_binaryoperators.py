@@ -60,6 +60,7 @@ class AbstractBinaryOperator(BinaryOperator):
 # Import generated binary operator implementations from fishbowl
 from gafferpy.generated_api.binary_operators import *
 
+
 class BinaryOperatorContext(ToJson, ToCodeString):
     CLASS = "gaffer.AggregatorContext"
 
