@@ -25,7 +25,6 @@ import gafferpy.gaffer_predicates as pred
 import gafferpy.gaffer_binaryoperators as bop
 
 
-
 class Function(ToJson, ToCodeString):
     CLASS = "java.util.function.Function"
 
@@ -71,6 +70,7 @@ class ElementGenerator(Function):
 
 # Import generated function implementations from fishbowl
 from gafferpy.generated_api.functions import *
+
 
 class FunctionContext(TupleAdaptedFunction):
     CLASS = "gaffer.FunctionContext"
