@@ -18,7 +18,7 @@
 This module contains Python copies of Gaffer predicate java classes
 """
 
-from gafferpy.gaffer_core import ToJson, ToCodeString, ToCodeString, inspect, JsonConverter
+from gafferpy.gaffer_core import * #ToJson, ToCodeString, ToCodeString, inspect, JsonConverter
 import sys
 
 
