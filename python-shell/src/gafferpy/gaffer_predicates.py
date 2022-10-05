@@ -18,8 +18,8 @@
 This module contains Python copies of Gaffer predicate java classes
 """
 
-from gafferpy.generated_api.predicates import *
-from gafferpy.gaffer_core import *
+from gafferpy.gaffer_core import ToJson, ToCodeString, inspect, JsonConverter
+import sys
 
 
 class PredicateContext(ToJson, ToCodeString):
@@ -85,8 +85,9 @@ class TimeUnit:
 
 
 # Import generated predicate implementations from fishbowl
-
+from gafferpy.generated_api.predicates import *
 # Add an alternative name for IntegerTupleAdaptedPredicate
+
 
 class NestedPredicate(IntegerTupleAdaptedPredicate):
     pass

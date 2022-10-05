@@ -19,7 +19,7 @@
 This module contains Python copies of Gaffer operation java classes
 """
 
-from gafferpy.generated_api.operations import *
+
 import gafferpy.gaffer_binaryoperators as gaffer_binaryoperators
 import gafferpy.gaffer_functions as gaffer_functions
 import gafferpy.gaffer_predicates as gaffer_predicates
@@ -674,7 +674,7 @@ class Conditional(ToJson, ToCodeString):
 
 
 # Import generated operation implementations from fishbowl
-
+from gafferpy.generated_api.operations import *
 # Parameters
 
 class AddNamedOperation(AddNamedOperation):

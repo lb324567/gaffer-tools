@@ -19,10 +19,11 @@
 This module contains Python copies of Gaffer function java classes
 """
 
-from gafferpy.generated_api.functions import *
+
 from gafferpy.gaffer_core import *
 import gafferpy.gaffer_predicates as pred
 import gafferpy.gaffer_binaryoperators as bop
+
 
 
 class Function(ToJson, ToCodeString):
@@ -69,7 +70,7 @@ class ElementGenerator(Function):
 
 
 # Import generated function implementations from fishbowl
-
+from gafferpy.generated_api.functions import *
 
 class FunctionContext(TupleAdaptedFunction):
     CLASS = "gaffer.FunctionContext"

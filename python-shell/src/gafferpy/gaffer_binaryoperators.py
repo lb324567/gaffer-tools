@@ -18,7 +18,7 @@
 This module contains Python copies of Gaffer java classes
 """
 
-from gafferpy.generated_api.binary_operators import *
+
 from gafferpy.gaffer_core import *
 
 
@@ -58,7 +58,7 @@ class AbstractBinaryOperator(BinaryOperator):
 
 
 # Import generated binary operator implementations from fishbowl
-
+from gafferpy.generated_api.binary_operators import *
 
 class BinaryOperatorContext(ToJson, ToCodeString):
     CLASS = "gaffer.AggregatorContext"

@@ -17,7 +17,7 @@
 """
 This module contains Python copies of Gaffer config java classes
 """
-from gafferpy.generated_api.config import *
+
 import inspect
 import sys
 
@@ -33,7 +33,7 @@ class GetGraph:
 
 
 # Import generated config implementations from fishbowl
-
+from gafferpy.generated_api.config import *
 # Add an alternative name for GetFilterFunctions
 
 class GetClassFilterFunctions(GetFilterFunctions):
