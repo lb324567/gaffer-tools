@@ -9,9 +9,7 @@ on:
       - 'alpha-release/**'
 
 jobs:
-
   autopep8:
-    # Check if the PR is not raised by this workflow and is not from a fork
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +17,7 @@ jobs:
         id: autopep8
         uses: peter-evans/autopep8@v1
         with:
+          # ignore E402 rule to avoid changes that cause circular imports
           args: --exit-code --recursive --in-place --aggressive --aggressive --ignore E402 .
       - name: Set autopep8 branch name
         id: vars
