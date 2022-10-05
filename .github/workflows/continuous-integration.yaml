@@ -3,10 +3,6 @@ name: Continuous Integration
 on:
   pull_request:
   push:
-    branches:
-      - 'release/**'
-      - 'hotfix/**'
-      - 'alpha-release/**'
 
 jobs:
   autopep8:
