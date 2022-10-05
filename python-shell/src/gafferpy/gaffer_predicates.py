@@ -18,7 +18,7 @@
 This module contains Python copies of Gaffer predicate java classes
 """
 
-from gafferpy.gaffer_core import * #ToJson, ToCodeString, ToCodeString, inspect, JsonConverter
+from gafferpy.gaffer_core import ToJson, ToCodeString, ToCodeString, inspect, JsonConverter
 import sys
 
 
@@ -26,6 +26,7 @@ class PredicateContext(ToJson, ToCodeString):
     CLASS = "gaffer.PredicateContext"
 
     def __init__(self, selection=None, predicate=None):
+        print("CODE CHANGE TO FORCE ACTION AS NOTHING ELSE IS WORKING")
         if isinstance(selection, list):
             self.selection = selection
         else:
